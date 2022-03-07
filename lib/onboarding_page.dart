@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:projects/home_page.dart';
 import 'package:projects/login_page.dart';
 
 class OnboardingPage extends StatelessWidget {
+  const OnboardingPage({Key? key}) : super(key: key);
+
 
 
   @override
@@ -96,7 +97,7 @@ class OnboardingPage extends StatelessWidget {
           width: 50,
           height: 50,
             decoration: BoxDecoration(
-              color: Color(0xff5FC5FF),
+              color: const Color(0xff5FC5FF),
               borderRadius: BorderRadius.circular(30),
             ),
             child: const Icon(Icons.navigate_next, size: 30, color: Colors.white,)),
@@ -104,7 +105,7 @@ class OnboardingPage extends StatelessWidget {
             width: 50,
             height: 50,
             decoration: BoxDecoration(
-                color: Color(0xff5FC5FF),
+                color: const Color(0xff5FC5FF),
                 borderRadius: BorderRadius.circular(30)
             ),
             child: const Icon(Icons.navigate_next, size: 30, color: Colors.white,)),
@@ -122,7 +123,7 @@ class OnboardingPage extends StatelessWidget {
       )
   );
  void goToHome(context) => Navigator.of(context).pushReplacement(
-   MaterialPageRoute(builder: (_) => LoginPage()),
+   MaterialPageRoute(builder: (_) => const LoginPage()),
  );
   buildImage(String path) =>
     Center(child: Image.asset(path,width: 350,),);
@@ -130,10 +131,10 @@ class OnboardingPage extends StatelessWidget {
   DotsDecorator getDotDecoration() => DotsDecorator(
     // spacing: EdgeInsets.only(right: 10),
     spacing: const EdgeInsets.symmetric(horizontal: 3.0),
-    color: Color(0xffFFD7D4),
-    size: Size(16,16),
-    activeColor: Color(0xffFF8982),
-    activeSize: Size(41,16),
+    color: const Color(0xffFFD7D4),
+    size: const Size(16,16),
+    activeColor: const Color(0xffFF8982),
+    activeSize: const Size(41,16),
     activeShape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(24)
   ),

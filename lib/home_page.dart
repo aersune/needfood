@@ -16,15 +16,15 @@ class _HomePageState extends State<HomePage> {
 
   int currentTab = 0;
   final List<Widget> screens =[
-    Dashboard(),
-    Favorites(),
-    Card(),
-    Messege(),
-    Profile(),
+    const Dashboard(),
+    const Favorites(),
+    const Card(),
+    const Messege(),
+    const Profile(),
   ];
 
   final PageStorageBucket bucket = PageStorageBucket();
-  Widget currentScreen = Dashboard();
+  Widget currentScreen = const Dashboard();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,12 +35,12 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
         elevation: 2.0,
         onPressed: (){},
-        child: Icon(Icons.shopping_cart_outlined, color: Color(0xff6D6D6D),size: 25,),
+        child: const Icon(Icons.shopping_cart_outlined, color:  Color(0xff6D6D6D),size: 25,),
       ),floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         notchMargin: 5,
-        child: Container(
+        child: SizedBox(
           height: 50,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,40 +48,40 @@ class _HomePageState extends State<HomePage> {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   MaterialButton(
                     minWidth: 40,
                     onPressed: (){
                       setState(() {
-                        currentScreen = Dashboard();
+                        currentScreen = const Dashboard();
                         currentTab = 0;
                       });
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        ImageIcon(AssetImage('assets/Vector.png'),
+                        ImageIcon(const AssetImage('assets/Vector.png'),
                           size: 30,
-                          color: currentTab == 0 ? Colors.blue : Color(0xff6D6D6D),
+                          color: currentTab == 0 ? Colors.blue : const Color(0xff6D6D6D),
                         )
                       ],
                     ),
                   ),
-                  SizedBox(width: 20,),
+                  const SizedBox(width: 20,),
                   MaterialButton(
                     minWidth: 40,
                     onPressed: (){
                       setState(() {
-                        currentScreen = Favorites();
+                        currentScreen = const Favorites();
                         currentTab = 1;
                       });
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        ImageIcon(AssetImage('assets/like.png'),
+                        ImageIcon(const AssetImage('assets/like.png'),
                           size: 30,
-                          color: currentTab == 1 ? Colors.blue : Color(0xff6D6D6D),
+                          color: currentTab == 1 ? Colors.blue : const Color(0xff6D6D6D),
                         )
                       ],
                     ),
@@ -95,40 +95,40 @@ class _HomePageState extends State<HomePage> {
                     minWidth: 40,
                     onPressed: (){
                       setState(() {
-                        currentScreen = Messege();
+                        currentScreen = const Messege();
                         currentTab = 2;
                       });
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        ImageIcon(AssetImage('assets/chat.png'),
+                        ImageIcon(const AssetImage('assets/chat.png'),
                           size: 30,
-                          color: currentTab == 2 ? Colors.blue : Color(0xff6D6D6D),
+                          color: currentTab == 2 ? Colors.blue : const Color(0xff6D6D6D),
                         )
                       ],
                     ),
                   ),
-                  SizedBox(width: 20,),
+                  const SizedBox(width: 20,),
                   MaterialButton(
                     minWidth: 40,
                     onPressed: (){
                       setState(() {
-                        currentScreen = Profile();
+                        currentScreen = const Profile();
                         currentTab = 3;
                       });
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        ImageIcon(AssetImage('assets/user.png'),
+                        ImageIcon(const AssetImage('assets/user.png'),
                           size: 30,
-                          color: currentTab == 3 ? Colors.blue : Color(0xff6D6D6D),
+                          color: currentTab == 3 ? Colors.blue : const Color(0xff6D6D6D),
                         )
                       ],
                     ),
                   ),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                 ],
               ),
             ],

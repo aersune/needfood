@@ -36,7 +36,7 @@ class Dashboard extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(30,),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Color.fromRGBO(0, 0, 0, 0.15),
                               spreadRadius: 1,
@@ -47,10 +47,10 @@ class Dashboard extends StatelessWidget {
                       ),
                       child:IconButton(
                         onPressed: (){},
-                        icon: Icon(Icons.search, color: Colors.black,size: 30,),
+                        icon: const Icon(Icons.search, color: Colors.black,size: 30,),
                       )
                   ),
-                  SizedBox(width: 20,)
+                  const SizedBox(width: 20,)
                 ],
               )
             ],
@@ -137,7 +137,7 @@ class Dashboard extends StatelessWidget {
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.only(bottom: 20),
+                  padding: const EdgeInsets.only(bottom: 20),
                   child: Row(
                     children: [
                       const SizedBox(width: 10,),
@@ -158,7 +158,7 @@ class Dashboard extends StatelessWidget {
                       color: Colors.black
                   ),),
                 ),
-                SizedBox(height: 13,),
+                const SizedBox(height: 13,),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -167,7 +167,7 @@ class Dashboard extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: NetworkImage('https://media.istockphoto.com/photos/hamburger-with-cheese-and-french-fries-picture-id1188412964?k=20&m=1188412964&s=612x612&w=0&h=Ow-uMeygg90_1sxoCz-vh60SQDssmjP06uGXcZ2MzPY='),
                             )
                         ),
@@ -178,7 +178,7 @@ class Dashboard extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: NetworkImage('https://media.istockphoto.com/photos/delicious-homemade-hamburger-and-french-fries-picture-id1254672762?b=1&k=20&m=1254672762&s=170667a&w=0&h=nKrG40G2jj9O8wzJ8wDD2zmUKNp00mcdVWK_f_zixug='),
                             )
                         ),
@@ -189,7 +189,7 @@ class Dashboard extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: NetworkImage('https://img.freepik.com/free-photo/front-view-meat-burger-with-cheese-salad-tomatoes-dark-floor_140725-89524.jpg'),
                             )
                         ),
@@ -205,7 +205,7 @@ class Dashboard extends StatelessWidget {
             ),
           ),
         ),
-      ),);;
+      ),);
   }
 }
 
@@ -218,7 +218,7 @@ Widget categoryCard(BuildContext context,img,text){
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Colors.white,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(0, 0, 0, 0.15),
               spreadRadius: 1,
@@ -231,7 +231,7 @@ Widget categoryCard(BuildContext context,img,text){
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image(image: AssetImage(img)),
-          Text(text, style: TextStyle(
+          Text(text, style: const TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w500
           ),)
@@ -250,7 +250,7 @@ Widget popularCard(BuildContext context, img, text, text2,price){
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Colors.white,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(0, 0, 0, 0.15),
               spreadRadius: 1,
@@ -262,7 +262,7 @@ Widget popularCard(BuildContext context, img, text, text2,price){
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
+          SizedBox(
               height: 98,
               child: Image(image: AssetImage(img),fit: BoxFit.cover,)),
           Text(text, style: const TextStyle(
@@ -273,7 +273,7 @@ Widget popularCard(BuildContext context, img, text, text2,price){
               fontSize: 13,
               color: Color(0xff6D6D6D)
           ),),
-          SizedBox(height: 7,),
+          const SizedBox(height: 7,),
           Text(price, style: const TextStyle(
             fontSize: 18,
           ),),
