@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projects/home_page.dart';
 import 'package:projects/login_page.dart';
+import 'package:projects/onboarding_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat',
         primarySwatch: Colors.blue,
       ),
-      home:  LoginPage(),
+      home:  OnboardingPage(),
     );
   }
 }
