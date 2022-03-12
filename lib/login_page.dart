@@ -5,7 +5,7 @@ import 'package:projects/home_page.dart';
 
 
 class LoginPage extends StatefulWidget {
-   LoginPage({key}) : super(key: key);
+   const LoginPage({key}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -15,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   final focusNode = FocusNode();
   final focusNode2 = FocusNode();
 
-  var _controller = TextEditingController();
+  final _controller = TextEditingController();
   bool _isFocused = false;
   bool _isFocused2 = false;
 
@@ -31,7 +31,6 @@ class _LoginPageState extends State<LoginPage> {
         });
     });
     focusNode2.addListener(() {
-      print(focusNode2.hasFocus);
       setState(() {
         _isFocused = false;
         _isFocused2 = focusNode2.hasFocus;
@@ -43,14 +42,17 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    var size = mediaQueryData.size;
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           const SizedBox(height: 15.5,),
           Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height/4,
+            width: size.width,
+            height: size.height/4,
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/rectenge.png")
@@ -70,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           Expanded(
             child: Container(
-              width: MediaQuery.of(context).size.width,
+              width: size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/bg.png'),alignment: Alignment.centerRight,
@@ -78,9 +80,9 @@ class _LoginPageState extends State<LoginPage> {
               ),
               child: Column(
                 children: [
-                  const SizedBox(height: 63,),
+                  SizedBox(height: size.height/12,),
                   Text('Sign In',style: const TextStyle( fontWeight: FontWeight.w600, fontSize: 36),),
-                  SizedBox(height: 24,),
+                  SizedBox(height: size.height/36,),
 
                   FormSample(),
                   // SizedBox(

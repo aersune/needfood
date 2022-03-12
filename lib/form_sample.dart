@@ -16,6 +16,8 @@ class _FormSampleState extends State<FormSample> {
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    var size = mediaQueryData.size;
     return Form(
       key: formKey,
       child: Column(
@@ -51,9 +53,9 @@ class _FormSampleState extends State<FormSample> {
 
             ),
           ),
-          const SizedBox(height: 14,),
+          SizedBox(height: size.height/45,),
           SizedBox(
-            width: MediaQuery.of(context).size.width-40,
+            width: size.width-40,
             child: TextFormField(
               controller: _controller,
               validator: (value){
@@ -86,11 +88,11 @@ class _FormSampleState extends State<FormSample> {
 
             )),
 
-          const SizedBox(height: 14,),
+          SizedBox(height: size.height/50,),
           const Text('Forgot password ?'),
-          const SizedBox(height: 25,),
+          SizedBox(height: size.height/40,),
           SizedBox(
-            width: MediaQuery.of(context).size.width-40,
+            width: size.width-40,
             height: 50,
             child: ElevatedButton(
               style: ButtonStyle(
