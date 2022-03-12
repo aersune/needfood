@@ -123,7 +123,7 @@ class OnboardingPage extends StatelessWidget {
       )
   );
  void goToHome(context) => Navigator.of(context).pushReplacement(
-   MaterialPageRoute(builder: (_) => const LoginPage()),
+   MaterialPageRoute(builder: (_) =>  LoginPage()),
  );
   buildImage(String path) =>
     Center(child: Image.asset(path,width: 350,),);
