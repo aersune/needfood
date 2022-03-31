@@ -29,12 +29,17 @@ class OnboardingPage extends StatelessWidget {
       ),
       body: IntroductionScreen(
         nextStyle: TextButton.styleFrom(alignment: Alignment.bottomRight,
-            padding: EdgeInsets.only(right: 25, bottom: 20),
+            padding: EdgeInsets.only(right: 30, bottom: 20),
+          splashFactory: NoSplash.splashFactory,
+
+        ),
+        doneStyle: TextButton.styleFrom(alignment: Alignment.bottomRight,
+          padding: EdgeInsets.only(right: 30, bottom: 20),
         ),
         controlsMargin: EdgeInsets.only(left: 12),
         dotsFlex: 0,
         nextFlex: 1,
-        curve: Curves.bounceInOut,
+        curve: Curves.easeInOut,
         skipOrBackFlex: 0,
         globalBackgroundColor: Colors.white,
         pages: [

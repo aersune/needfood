@@ -141,7 +141,11 @@ class Dashboard extends StatelessWidget {
                   child: Row(
                     children: [
                       const SizedBox(width: 10,),
-                      popularCard(context, 'assets/popular1.png', 'Beef Burger', 'Mcdi', "Rp. 20.000"),                    const SizedBox(width: 10,),
+                      InkWell(
+                        onTap: (){
+                          // js.context.callMethod('open', ['https://www.fluttercampus.com/guide/51/how-to-open-external-link-in-new-or-same-tab-in-flutter-web/']);
+                        },
+                          child: popularCard(context, 'assets/popular1.png', 'Beef Burger', 'Mcdi', "Rp. 20.000")),                    const SizedBox(width: 10,),
                       const SizedBox(width: 19,),
                       popularCard(context, 'assets/popular2.png', 'Pizza Fruit', 'Pijja hut', "RRp. 40.000"),
                       const SizedBox(width: 19,),

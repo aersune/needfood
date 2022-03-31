@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat',
         primarySwatch: Colors.blue,
       ),
-      home:  LoginPage(),
+      home:  OnboardingPage(),
     );
   }
 }

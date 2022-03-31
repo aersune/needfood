@@ -81,10 +81,10 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 children: [
                   SizedBox(height: size.height/12,),
-                  Text('Sign In',style: const TextStyle( fontWeight: FontWeight.w600, fontSize: 36),),
+                  const Text('Sign In',style: TextStyle( fontWeight: FontWeight.w600, fontSize: 36),),
                   SizedBox(height: size.height/36,),
 
-                  FormSample(),
+                  const FormSample(),
                   // SizedBox(
                   //   width: MediaQuery.of(context).size.width-40,
                   //   child:  TextField(
@@ -143,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           Text('No account yet ?'),
-          SizedBox(height: 7,),
+          const SizedBox(height: 7,),
           InkWell(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -153,7 +153,7 @@ class _LoginPageState extends State<LoginPage> {
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                     color: Colors.blue.shade600),),
-                SizedBox(width: 8,),
+                const SizedBox(width: 8,),
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.blue.shade600),
